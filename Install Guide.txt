@@ -1,0 +1,84 @@
+================================================================================
+AMAPP - Adaptive Music Application
+Installation Guide
+================================================================================
+
+Thank you for downloading AMAPP! Follow these steps to get started.
+
+
+REQUIREMENTS
+--------------------------------------------------------------------------------
+- REAPER 6.0 or later
+- SWS/S&M Extension
+- ReaImGui (Dear ImGui for ReaScript)
+- js_ReaScriptAPI
+
+
+INSTALLATION
+--------------------------------------------------------------------------------
+
+1. EXTRACT FILES
+   Extract the contents of this zip to your REAPER Scripts folder:
+   - macOS:   ~/Library/Application Support/REAPER/Scripts/
+   - Windows: %APPDATA%\REAPER\Scripts\
+
+2. INSTALL REQUIRED EXTENSIONS (if not already installed)
+
+   a) SWS/S&M Extension
+      - Download from: https://www.sws-extension.org/
+      - Run the installer and restart REAPER
+
+   b) ReaImGui
+      - In REAPER: Extensions -> ReaPack -> Browse Packages
+      - Search for "ReaImGui"
+      - Right-click "ReaImGui: ReaScript binding for Dear ImGui" -> Install
+      - Click OK and restart REAPER
+
+   c) js_ReaScriptAPI
+      - In REAPER: Extensions -> ReaPack -> Browse Packages
+      - Search for "js_ReaScriptAPI"
+      - Right-click "js_ReaScriptAPI" -> Install
+      - Click OK and restart REAPER
+
+3. INSTALL C++ EXTENSION (Optional, Recommended)
+   The native extension provides improved performance for cluster operations.
+
+   Supported platforms:
+     - macOS: Intel (x86_64) and Apple Silicon (arm64) — universal binary
+     - Windows: 64-bit (x64) — requires 64-bit REAPER
+
+   Installation:
+     - macOS:   Copy reaper_amapp.dylib to ~/Library/Application Support/REAPER/UserPlugins/
+     - Windows: Copy reaper_amapp.dll to %APPDATA%\REAPER\UserPlugins\
+   - Restart REAPER
+
+4. LOAD AMAPP
+   - In REAPER: Actions -> Show Action List
+   - Click "New action..." -> "Load ReaScript..."
+   - Navigate to where you extracted AMAPP and select: AMAPP-Cluster_manager.lua
+   - Close the Actions window
+
+5. RUN AMAPP
+   - In REAPER: Actions -> Show Action List
+   - Search for "AMAPP"
+   - Select "AMAPP: Run" and click "Run"
+   - On first run, AMAPP will verify your installation and prompt for license activation
+
+
+LICENSE ACTIVATION
+--------------------------------------------------------------------------------
+- Enter your license key when prompted
+- License keys are tied to your purchase and email
+- Contact support if you need assistance with activation
+
+
+SUPPORT
+--------------------------------------------------------------------------------
+- Email:   support@mountwestmusic.com
+- Discord: https://discord.gg/xs8AEhx6h2
+- Website: https://amapp.io
+
+
+================================================================================
+Mount West Music AB - https://mountwestmusic.com
+================================================================================

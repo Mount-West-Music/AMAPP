@@ -1,0 +1,54 @@
+☱ AMAPP v0.5.0 - Beta Release (April 2026)
+
+## New Features
+- Create Group modal with name input, "Create region" checkbox, and color picker
+- 11 action scripts for hotkey binding (Render All, Create Cluster, Toggle Overlay, etc.)
+- C++ extension for performance-critical operations (50 APIs)
+- GUI quick action buttons
+- Fixed Lanes support: create, duplicate, and render clusters directly from fixed lanes
+- Wildcards in export file paths (e.g. $projectdir, $cluster, $tempo)
+- Ogg Vorbis added to primary render format options
+- "Clear sync points" option in cluster context menu
+- Default hotkeys for common actions
+- Cross-platform automated builds (GitHub Actions for macOS and Windows)
+- Wwise integration now runs through the C++ extension (faster, no Python dependency required when binaries are present)
+
+## Improvements
+- Improved auth flow with better error handling
+- Render session improvements
+- State manager and cluster tree utilities extracted for better modularity
+- Error handling framework with Discord bug reporting
+- Timeline cluster bar: better responsiveness, spacing, and clamping behavior
+- Dragging clusters now moves attached items along with them
+- Revamped minimap interaction and visuals
+- Focus mode: improved visualization, scroll behavior, and visibility
+- Audition: faster playback, improved GUI, click-on-preview-item support
+- Cluster list: new icon, improved quick-add buttons, better create-cluster flow
+- Activate / deactivate clusters workflow polished
+- Responsive GUI height and menu-bar layout refinements
+- Render batch process reliability improvements
+- Legacy project data now parses gracefully with JSON schema fallbacks
+
+## Bug Fixes
+- Fixed: Regions with same start position as temporary cluster render regions no longer get incorrectly removed
+- Fixed: Async request error handling
+- Fixed: I_FOLDERCOMPACT now cached correctly during Render Cluster
+- Fixed: Batch rendering clusters with no overlapping items no longer errors out
+- Fixed: Default export options now load on project startup
+- Fixed: Items are reliably added to a cluster at create time
+- Fixed: Project no longer marked dirty by internal update function
+- Fixed: Quick-add buttons draw correctly while a cluster is being moved
+- Fixed: Timeline cluster label button focus behavior
+- Fixed: Infinite recursion prevented when nesting groups
+- Fixed: Group items are no longer rendered as standalone audio
+- Fixed: Stored data parses reliably against the JSON schema
+- Fixed: Debug menus no longer appear in release builds
+
+## Known Issues
+- Undo/Redo currently only works for native operations. Most operations that are unique to AMAPP, such as editing Clusters and adding/removing items from Clusters, can not be completely reverted/restored.
+- Plugging/Unplugging external screens while the computer has AMAPP active in REAPER may cause AMAPP to crash. This is due to GPU context invalidation causing ImGui font atlas texture IDs to become stale. Proactive font validation is in place but cannot fully prevent the crash when it occurs mid-frame.
+- Timeline GUI may scale wrongly on Windows laptops when the Primary Screen is set to the external screen and its scale is different from the laptops screen scaling.
+- Cluster Recordings are not fully etched out with recordings into Fixed Lanes. Currently all items that have been recorded, old as new, are stored in the same Cluster.
+- Item mute state is not fully restored after Cluster is Focused -> Render (Selected) Clusters -> Unfocus Clusters. Render Cluster function needs to be integrated with new Focus implementation.
+- AMAPP does not have any features that supports sub-projects at the moment.
+- Regions with same start and end positions as a cluster with same name will be removed after Render cluster.

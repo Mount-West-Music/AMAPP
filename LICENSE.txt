@@ -1,0 +1,81 @@
+AMAPP END-USER LICENSE AGREEMENT (EULA)
+Effective Date: 2026-04-05
+
+PLEASE READ THIS END-USER LICENSE AGREEMENT ('AGREEMENT') CAREFULLY BEFORE USING THE AMAPP SOFTWARE. BY ACCESSING OR USING THE SOFTWARE, YOU AGREE TO BE BOUND BY THE TERMS AND CONDITIONS BELOW. IF YOU DO NOT AGREE, DO NOT USE THE SOFTWARE.
+
+This Agreement is a binding legal contract between you ('End-User' or 'You') and Mount West Music AB ('Licensor'). It governs your use of the AMAPP software (the 'Software').
+
+BY CLICKING 'ACCEPT' OR USING THE AMAPP SOFTWARE, YOU ACKNOWLEDGE THAT YOU HAVE READ AND AGREE TO THE TERMS OF THIS AGREEMENT.
+
+1. LICENSE GRANT
+Subject to your compliance with this Agreement and payment of applicable fees, Licensor grants you a non-exclusive, non-transferable, revocable license to use the Software for personal, professional, or enterprise purposes, in accordance with the terms specified in this Agreement.
+
+1.1 Solo Licenses (Scout / Cartographer)
+A Solo License is a single-user license tied to the licensed email address.
+	•	Permits one individual licensee to install and use the Software on devices that licensee owns or controls.
+	•	The license is non-transferable and may not be shared between multiple users or seats.
+	•	Covers standard features and does not include advanced customization or integration support.
+
+1.2 Team License (Expedition)
+A Team License is intended for studios and organizations using the Software for collaborative or multi-user production.
+	•	Permits internal collaboration and multi-user installations within the licensed organization.
+	•	Includes support for customized features or integrations.
+	•	Includes access to premium support services.
+	•	To obtain or extend a Team License, contact Mount West Music at contact@mountwestmusic.com.
+
+2. USAGE RIGHTS AND RESTRICTIONS
+You may:
+	•	Install and use the Software on devices that you own or control, subject to the scope of your license (Solo or Team) as defined in Section 1.
+	•	Access updates and features provided by Licensor during the term of your license.
+You may NOT:
+	•	Copy, modify, or distribute the Software or any part of it, except where explicitly permitted by open-source licenses as described in Section 5.
+	•	Decompile, reverse engineer, or disassemble the Software, except as permitted by applicable law or open-source licenses.
+	•	Use the Software for illegal purposes or in violation of applicable laws.
+	•	Share your login credentials or allow unauthorized access to the Software.
+	•	Use the Software in a manner that violates third-party intellectual property rights.
+
+3. OWNERSHIP AND INTELLECTUAL PROPERTY
+The Software, including proprietary code, trademarks, designs, and accompanying documentation, is the exclusive property of Licensor. Portions of the Software may include open-source components, which are governed by their respective licenses as described in Section 5.
+
+All rights not expressly granted in this Agreement are reserved by Licensor or the applicable open-source licensors.
+
+4. SUPPORT AND UPDATES
+•	Licensor may provide updates, bug fixes, or new features at its sole discretion.
+•	Updates may be required for continued use of the Software and will be provided with reasonable notice through email or in-app notifications.
+•	You are responsible for ensuring that your contact information is up to date to receive such notifications.
+
+5. OPEN-SOURCE COMPONENTS
+The Software contains components licensed under open-source licenses such as the MIT license or similar. These components are identified within the Software or accompanying documentation.
+You agree to comply with the terms of these open-source licenses, which may grant you additional rights beyond those provided under this Agreement.
+For more information about the open-source components used in the Software and their licenses, please refer to the files' content description.
+To the extent required by these open-source licenses, you may have the right to access the source code of these components and to modify and redistribute them under the terms of their respective licenses.
+
+6. DISCLAIMER OF WARRANTIES
+The Software is provided 'AS IS,' without any warranties of any kind, either express or implied, including but not limited to merchantability, fitness for a particular purpose, or non-infringement.
+
+Licensor does not guarantee uninterrupted, error-free operation of the Software or that it will meet your requirements. Open-source components are also provided 'AS IS' under their respective licenses.
+
+7. LIMITATION OF LIABILITY
+To the fullest extent permitted by law, Licensor will not be liable for any damages arising out of or related to the use or inability to use the Software, including but not limited to direct, indirect, incidental, special, or consequential damages, even if Licensor has been advised of the possibility of such damages.
+
+8. TERM AND TERMINATION
+This Agreement is effective upon your acceptance and will remain in effect unless terminated. Licensor may terminate this Agreement immediately if you breach any terms. Upon termination, you must delete all copies of the Software.
+
+9. PRIVACY POLICY
+The Software may collect usage data to improve functionality and user experience. Please refer to the privacy policy at https://amapp.io/privacy for detailed information on data collection, use, and protection.
+
+Trial Mode. The Software records a local trial-start timestamp in REAPER's extension state to display a reminder after thirty (30) days of first use. This timestamp is stored on your device and is not transmitted to Licensor.
+
+Error Reporting. The Software includes an optional error-reporting feature. When an error occurs, the Software will prompt you before transmitting any report. With your consent, the Software transmits a report to a Discord channel operated by Licensor containing: operating system, REAPER version, AMAPP version, timestamp, platform, error message, stack trace, and optional technical context. The report does not include your email address, license key, project contents, audio, or other personal data. You may decline transmission at any prompt.
+
+10. AMENDMENTS
+Licensor reserves the right to modify this Agreement at any time. Updated terms will be presented to you upon accessing the Software after a revision. Continued use constitutes acceptance of the modified terms.
+
+11. GOVERNING LAW
+This Agreement is governed by the laws of Sweden. Any disputes arising from this Agreement will be resolved in the courts of Sweden.
+
+12. CONTACT INFORMATION
+For questions regarding this Agreement, please contact:
+Mount West Music AB
+Email: support@mountwestmusic.com
+Website: https://mountwestmusic.com/

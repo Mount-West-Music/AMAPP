@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index version="1" name="AMAPP">
+  <category name="AMAPP">
+    <reapack name="AMAPP - Adaptive Music Application" type="script" desc="AMAPP - Adaptive music application for game projects">
+      <version name="0.5.0">
+        <changelog><![CDATA[
+☱ AMAPP v0.5.0 - Beta Release (April 2026)
+
+## New Features
+- Create Group modal with name input, "Create region" checkbox, and color picker
+- 11 action scripts for hotkey binding (Render All, Create Cluster, Toggle Overlay, etc.)
+- C++ extension for performance-critical operations (50 APIs)
+- GUI quick action buttons
+- Fixed Lanes support: create, duplicate, and render clusters directly from fixed lanes
+- Wildcards in export file paths (e.g. $projectdir, $cluster, $tempo)
+- Ogg Vorbis added to primary render format options
+- "Clear sync points" option in cluster context menu
+- Default hotkeys for common actions
+- Cross-platform automated builds (GitHub Actions for macOS and Windows)
+- Wwise integration now runs through the C++ extension (faster, no Python dependency required when binaries are present)
+
+## Improvements
+- Improved auth flow with better error handling
+- Render session improvements
+- State manager and cluster tree utilities extracted for better modularity
+- Error handling framework with Discord bug reporting
+- Timeline cluster bar: better responsiveness, spacing, and clamping behavior
+- Dragging clusters now moves attached items along with them
+- Revamped minimap interaction and visuals
+- Focus mode: improved visualization, scroll behavior, and visibility
+- Audition: faster playback, improved GUI, click-on-preview-item support
+- Cluster list: new icon, improved quick-add buttons, better create-cluster flow
+- Activate / deactivate clusters workflow polished
+- Responsive GUI height and menu-bar layout refinements
+- Render batch process reliability improvements
+- Legacy project data now parses gracefully with JSON schema fallbacks
+
+## Bug Fixes
+- Fixed: Regions with same start position as temporary cluster render regions no longer get incorrectly removed
+- Fixed: Async request error handling
+- Fixed: I_FOLDERCOMPACT now cached correctly during Render Cluster
+- Fixed: Batch rendering clusters with no overlapping items no longer errors out
+- Fixed: Default export options now load on project startup
+- Fixed: Items are reliably added to a cluster at create time
+- Fixed: Project no longer marked dirty by internal update function
+- Fixed: Quick-add buttons draw correctly while a cluster is being moved
+- Fixed: Timeline cluster label button focus behavior
+- Fixed: Infinite recursion prevented when nesting groups
+- Fixed: Group items are no longer rendered as standalone audio
+- Fixed: Stored data parses reliably against the JSON schema
+- Fixed: Debug menus no longer appear in release builds
+]]></changelog>
+        <source main="main" file="AMAPP-Cluster_manager.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/AMAPP-Cluster_manager.lua</source>
+        <source file="scripts/AMAPP-Create_cluster_group.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/scripts/AMAPP-Create_cluster_group.lua</source>
+        <source file="scripts/AMAPP-Create_new_render_cluster.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/scripts/AMAPP-Create_new_render_cluster.lua</source>
+        <source file="scripts/AMAPP-Create_new_set.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/scripts/AMAPP-Create_new_set.lua</source>
+        <source file="scripts/AMAPP-Deactivate_selected_cluster.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/scripts/AMAPP-Deactivate_selected_cluster.lua</source>
+        <source file="scripts/AMAPP-Delete_render_cluster.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/scripts/AMAPP-Delete_render_cluster.lua</source>
+        <source file="scripts/AMAPP-Duplicate_cluster.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/scripts/AMAPP-Duplicate_cluster.lua</source>
+        <source file="scripts/AMAPP-Edit_render_cluster.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/scripts/AMAPP-Edit_render_cluster.lua</source>
+        <source file="scripts/AMAPP-Focus_view_selected_clusters.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/scripts/AMAPP-Focus_view_selected_clusters.lua</source>
+        <source file="scripts/AMAPP-Get_cluster.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/scripts/AMAPP-Get_cluster.lua</source>
+        <source file="scripts/AMAPP-Get_items_in_cluster.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/scripts/AMAPP-Get_items_in_cluster.lua</source>
+        <source file="scripts/AMAPP-Get_selected_region_name.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/scripts/AMAPP-Get_selected_region_name.lua</source>
+        <source file="scripts/AMAPP-Implement_to_WAXML.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/scripts/AMAPP-Implement_to_WAXML.lua</source>
+        <source file="scripts/AMAPP-Implementation_design.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/scripts/AMAPP-Implementation_design.lua</source>
+        <source file="scripts/AMAPP-New_cluster_color.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/scripts/AMAPP-New_cluster_color.lua</source>
+        <source file="scripts/AMAPP-Render_clusters.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/scripts/AMAPP-Render_clusters.lua</source>
+        <source file="scripts/AMAPP-Set_cluster_boundaries.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/scripts/AMAPP-Set_cluster_boundaries.lua</source>
+        <source file="scripts/AMAPP-Set_cluster_loop.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/scripts/AMAPP-Set_cluster_loop.lua</source>
+        <source file="scripts/AMAPP-Solo_items_in_cluster.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/scripts/AMAPP-Solo_items_in_cluster.lua</source>
+        <source file="scripts/AMAPP-Update_render_cluster_table_ext_proj_state.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/scripts/AMAPP-Update_render_cluster_table_ext_proj_state.lua</source>
+        <source file="util/AMAPP-Async_request.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/util/AMAPP-Async_request.lua</source>
+        <source file="util/AMAPP-Auth.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/util/AMAPP-Auth.lua</source>
+        <source file="util/AMAPP-ClusterAPI.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/util/AMAPP-ClusterAPI.lua</source>
+        <source file="util/AMAPP-ClusterStore.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/util/AMAPP-ClusterStore.lua</source>
+        <source file="util/AMAPP-ClusterTree.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/util/AMAPP-ClusterTree.lua</source>
+        <source file="util/AMAPP-Constants.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/util/AMAPP-Constants.lua</source>
+        <source file="util/AMAPP-ErrorHandling.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/util/AMAPP-ErrorHandling.lua</source>
+        <source file="util/AMAPP-Eval_version.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/util/AMAPP-Eval_version.lua</source>
+        <source file="util/AMAPP-Logger.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/util/AMAPP-Logger.lua</source>
+        <source file="util/AMAPP-ModuleLoader.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/util/AMAPP-ModuleLoader.lua</source>
+        <source file="util/AMAPP-RegionManager.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/util/AMAPP-RegionManager.lua</source>
+        <source file="util/AMAPP-StateManager.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/util/AMAPP-StateManager.lua</source>
+        <source file="util/AMAPP-UndoManager.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/util/AMAPP-UndoManager.lua</source>
+        <source file="util/AMAPP-WwiseExport.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/util/AMAPP-WwiseExport.lua</source>
+        <source file="util/MWM-Render_config.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/util/MWM-Render_config.lua</source>
+        <source file="util/MWM-Table_serializer.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/util/MWM-Table_serializer.lua</source>
+        <source file="util/json/json.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/util/json/json.lua</source>
+        <source file="util/luatoxml/src/luatoxml.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/util/luatoxml/src/luatoxml.lua</source>
+        <source file="util/wwise_bin/bin/amapp_wwise">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/util/wwise_bin/bin/amapp_wwise</source>
+        <source file="util/wwise_bin/bin/amapp_wwise_direct">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/util/wwise_bin/bin/amapp_wwise_direct</source>
+        <source file="img/AMAPP Logo 7 text lg.png">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/img/AMAPP%20Logo%207%20text%20lg.png</source>
+        <source file="img/AMAPP Logo 7 w text micro.png">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/img/AMAPP%20Logo%207%20w%20text%20micro.png</source>
+        <source file="img/AMAPP logo 7 micro.png">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/img/AMAPP%20logo%207%20micro.png</source>
+        <source file="img/AMAPP render in progress.png">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/img/AMAPP%20render%20in%20progress.png</source>
+        <source file="img/mwm logo mini.png">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/img/mwm%20logo%20mini.png</source>
+        <source file="img/mwm-avatar.png">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/img/mwm-avatar.png</source>
+        <source file="util/init/double_to_int_2.ini">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/util/init/double_to_int_2.ini</source>
+        <source file="util/init/double_to_int_24bit.ini">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/util/init/double_to_int_24bit.ini</source>
+        <source main="main" file="actions/AMAPP-Action_Add_Item.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/actions/AMAPP-Action_Add_Item.lua</source>
+        <source main="main" file="actions/AMAPP-Action_Create_Cluster.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/actions/AMAPP-Action_Create_Cluster.lua</source>
+        <source main="main" file="actions/AMAPP-Action_Edit_Cluster.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/actions/AMAPP-Action_Edit_Cluster.lua</source>
+        <source main="main" file="actions/AMAPP-Action_Focus_Toggle.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/actions/AMAPP-Action_Focus_Toggle.lua</source>
+        <source main="main" file="actions/AMAPP-Action_Group_Clusters.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/actions/AMAPP-Action_Group_Clusters.lua</source>
+        <source main="main" file="actions/AMAPP-Action_Remove_Item.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/actions/AMAPP-Action_Remove_Item.lua</source>
+        <source main="main" file="actions/AMAPP-Action_Render_All.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/actions/AMAPP-Action_Render_All.lua</source>
+        <source main="main" file="actions/AMAPP-Action_Render_Selected.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/actions/AMAPP-Action_Render_Selected.lua</source>
+        <source main="main" file="actions/AMAPP-Action_Select_Items.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/actions/AMAPP-Action_Select_Items.lua</source>
+        <source main="main" file="actions/AMAPP-Action_Toggle_Arm.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/actions/AMAPP-Action_Toggle_Arm.lua</source>
+        <source main="main" file="actions/AMAPP-Action_Toggle_Overlay.lua">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/actions/AMAPP-Action_Toggle_Overlay.lua</source>
+        <source platform="darwin" type="extension" file="reaper_amapp.dylib">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/extension/reaper_amapp.dylib</source>
+        <source platform="win64" type="extension" file="reaper_amapp.dll">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/extension/reaper_amapp.dll</source>
+        <source file="Changelog.txt">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/Changelog.txt</source>
+        <source file="README.txt">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/README.txt</source>
+        <source file="LICENSE.txt">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/LICENSE.txt</source>
+        <source file="Install Guide.txt">https://raw.githubusercontent.com/Mount-West-Music/AMAPP/main/Install%20Guide.txt</source>
+      </version>
+      <metadata>
+        <link rel="website" href="https://amapp.io">AMAPP Website</link>
+        <link rel="website" href="https://forum.cockos.com/showthread.php?t=308478">REAPER Forum</link>
+        <link rel="website" href="https://discord.gg/xs8AEhx6h2">Discord</link>
+        <link rel="donation" href="https://github.com/sponsors/cfillion">Donate to cfillion (ReaPack)</link>
+        <link rel="donation" href="https://www.youtube.com/@TheRealMespotine">Support Mespotine</link>
+        <description><![CDATA[# AMAPP - Adaptive Music Application
+
+Automates adaptive music organization for game projects.
+
+**Requirements:** SWS/S&M, ReaImGui, js_ReaScriptAPI
+
+**Features:**
+- Render cluster management for batch audio processing
+- Wwise and WAXML integration
+- Timeline overlay for visual cluster management
+- Implementation design workflow]]></description>
+      </metadata>
+    </reapack>
+  </category>
+</index>
